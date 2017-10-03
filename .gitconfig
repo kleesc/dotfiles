@@ -1,0 +1,53 @@
+[user]
+	name = Kenny Lee Sin Cheong
+	email = kenny.lee28+git@gmail.com
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore
+	editor = emacsclient
+	autocrlf = input
+	safecrlf = true
+	trustctime = false
+[diff]
+	mnemonicprefix = true
+	algorithm = patience
+	compactionHeuristic = true
+[merge]
+	tool = ediff
+[mergetool]
+	prompt = true
+[mergetool "ediff"]
+	cmd = emacsclient -c -a \"\"  --eval \"(ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" nil \\\"$MERGED\\\")\"
+	# cmd = emacs --eval \"(ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" nil \\\"$MERGED\\\")\"
+[push]
+	default = simple
+[rerere]
+	enabled = true
+[alias]
+    s = status
+    ss = rev-parse --short
+    d = diff
+    dc = diff --cached
+    co = checkout
+    br = branch
+    remotes = remote
+    cherrypick = cherry-pick
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    fpca = format-patch --cover-letter
+    t = tree
+[github]
+	user = kleesc
+[credential]
+	helper = cache --timeout=3600
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = kenny.lee28@gmail.com
+	smtpserverport = 587
+	annotate = true
+#	chainreplyto = false
+#	suppresscc = self
+[format]
+	signoff = true
+	
