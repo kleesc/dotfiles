@@ -6,7 +6,6 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = emacsclient
-	autocrlf = input
 	safecrlf = true
 	trustctime = false
 [diff]
