@@ -15,6 +15,13 @@ alias gb="git branch"
 alias ga="git add"
 alias gp="git push"
 
+# grep
+alias grep="grep --color=auto"
+
+# tmux
+alias mx="tmux"
+alias mxa="tmux attach"
+
 # i <3 u cask
 alias cask='brew cask'
 
