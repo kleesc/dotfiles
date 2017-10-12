@@ -15,12 +15,25 @@ alias gb="git branch"
 alias ga="git add"
 alias gp="git push"
 
+_completion_loader git
+complete -o bashdefault -o default -o nospace -F _git g
+
+# kubectl
+alias kc="kubectl"
+
 # grep
 alias grep="grep --color=auto"
 
 # tmux
 alias mx="tmux"
-alias mxa="tmux attach"
+alias mxa="tmux attach -t"
+alias mxn="tmux new -s"
+alias mxs="tmux switch -t"
+
+# go
+alias cdgo="cd $GOPATH"
+alias cdgoo="cd $GOPATH/src"
+alias cdgooo="cd $GOPATH/src/github.com/kleesc"
 
 # i <3 u cask
 alias cask='brew cask'
