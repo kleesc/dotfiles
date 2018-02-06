@@ -7,6 +7,13 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# bash completion
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+	source "$(brew --prefix)/etc/bash_completion";
+elif [ -f /etc/bash_completion ]; then
+	source /etc/bash_completion;
+fi;
+
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 for file in ~/.{bash_prompt,exports,aliases,functions}; do
@@ -23,14 +30,6 @@ shopt -s histappend;
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-
-# bash completion
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-	source "$(brew --prefix)/etc/bash_completion";
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
-fi;
 
 # # homebrew completion (currently on linux)
 # source `brew --repository`/Library/Contributions/brew_bash_completion.sh
@@ -52,3 +51,6 @@ source <(kubectl completion bash)
 
 # Bash completion for minikube
 source <(minikube completion bash)
+
+# Bash completion for rustup
+source <(rustup completions bash)

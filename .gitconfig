@@ -1,6 +1,7 @@
 [user]
 	name = Kenny Lee Sin Cheong
 	email = kenny.lee28+git@gmail.com
+	signingkey = 8F5DE6168E92059D
 [color]
 	ui = auto
 [core]
