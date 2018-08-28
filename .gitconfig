@@ -1,7 +1,7 @@
 [user]
 	name = Kenny Lee Sin Cheong
 	email = kenny.lee28@gmail.com
-	signingkey = 6B153CE6A8FB108D
+	signingkey = 8F5DE6168E92059D
 [color]
 	ui = auto
 [core]
@@ -50,4 +50,3 @@
 #	suppresscc = self
 [format]
 	signoff = true
-	
