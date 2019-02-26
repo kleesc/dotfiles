@@ -54,3 +54,6 @@ source <(minikube completion bash)
 
 # Bash completion for rustup
 source <(rustup completions bash)
+
+# Bash completion for stack
+source <(stack --bash-completion-script stack)
