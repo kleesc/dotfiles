@@ -33,9 +33,11 @@
     br = branch
     remotes = remote
     cherrypick = cherry-pick
-    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    tree = log --graph --decorate --abbrev-commit --pretty=oneline
+    treee = log --graph --decorate --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     fpca = format-patch --cover-letter
     t = tree
+    te = treee
 [github]
 	user = kleesc
 [credential]

@@ -10,6 +10,7 @@ alias g="git"
 # More git
 alias gs="git status"
 alias gt="git tree"
+alias gte="git treee"
 alias gd="git diff"
 alias gb="git branch"
 alias ga="git add"
